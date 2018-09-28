@@ -1,0 +1,87 @@
+.header-sec {
+	padding: $pad-s 0;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.header__logo {}
+
+.header__date {
+	position: relative;
+	padding-left: 65px;
+	span {
+		position: absolute;
+		top: 0;
+		left: 0;
+		font-size: 48px;
+		font-weight: bold;
+		line-height: 1;
+	}
+	b {
+		text-transform: uppercase;
+		font-size: 18px;
+		font-weight: bold;
+	}
+	p {
+		font-size: 16px;
+		font-weight: 300;
+	}
+}
+
+.header__info {
+	span {
+		padding: 2px 12px;
+		text-transform: uppercase;
+		font-size: 18px;
+		font-weight: bold;
+		border-radius: 20px;
+		background: $green;
+	}
+	p {
+		padding: 0px 12px;
+		font-size: 16px;
+		font-weight: 300;
+	}
+}
+
+.header__soc {
+	display: flex;
+	align-items: center;
+	a {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 42px;
+		height: 42px;
+		margin: 0 6px;
+		border-radius: 50%;
+	}
+}
+
+.header__soc-viber {
+	border: 1px solid #cd71e8;
+	img {
+		margin-top: 2px;
+		margin-left: 2px;
+	}
+}
+
+.header__soc-whats {
+	border: 1px solid #37dd37;
+	img {
+		margin-left: 2px;
+	}
+}
+
+.header__soc-tele {
+	border: 1px solid #00aeef;
+	img {
+		margin-right: 3px;
+	}
+}
+
+.header__contact {}
