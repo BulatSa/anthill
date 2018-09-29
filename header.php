@@ -6,7 +6,7 @@
 	<meta name="format-detection" content="telephone=no">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Anthill</title>
+	<title>Anthill - Бесплатный вебинар для стартапов и инвесторов</title>
 
 	<!-- favicons -->
 	<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
@@ -21,7 +21,7 @@
 	<!-- favicons -->
 
 	<!-- og -->
-	<meta property="og:title" content="Anthill">
+	<meta property="og:title" content="Anthill - Бесплатный вебинар для стартапов и инвесторов">
 	<meta property="og:description" content="Сколько стоит ваш бизнес? Материальная и нематериальная оценка активов компании">
 	<meta property="og:type" content="website">
 	<meta property="og:image" content="/img/og.jpg">

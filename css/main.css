@@ -1672,6 +1672,8 @@ button {
   box-shadow: 0 7px 18px 0 rgba(0, 0, 0, 0.2);
   background: linear-gradient(to bottom, #3ae83a, #33cc33);
   transition: all 0.3s ease; }
+  .btn:hover {
+    box-shadow: 0 7px 25px 0 rgba(0, 0, 0, 0.4); }
   .btn:focus {
     outline: none; }
   .btn--white {
@@ -2326,9 +2328,11 @@ button::-moz-focus-inner {
   margin-bottom: 15px; }
 
 .partners-slider {
+  opacity: 0;
   height: 85px;
   overflow: hidden; }
   .partners-slider.flickity-enabled {
+    opacity: 1;
     height: auto;
     overflow: visible; }
 

@@ -100,7 +100,7 @@
 	</div>
 
 	<div id="modal-thanks" class="modal">
-		<p>Спасибо за заявку!</p>
+		<p class="modal__title">Спасибо за заявку!</p>
 	</div>
 
 	<div id="modal-error" class="modal">

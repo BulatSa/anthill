@@ -23,7 +23,9 @@ button {
 	background: linear-gradient(to bottom,#3ae83a, #33cc33);
 	transition: all 0.3s ease;
 
-
+	&:hover{
+		box-shadow: 0 7px 25px 0 transparentize(#000,0.6);
+	}
 
 	&:focus {
 		outline: none;
