@@ -1,14 +1,28 @@
-.footer-sec {}
+.footer-sec {
+	padding-bottom: 40px;
+}
 
-.footer {}
+.footer {
+	padding-top: 50px;
+
+	a[href^="tel"]{
+		white-space: nowrap;
+	}
+}
 
 .footer__info {
-	padding-top: 50px;
 	padding-bottom: $pad-s;
 	font-size: 12px;
 	line-height: (18/12);
 	font-weight: 300;
 	color: $gray;
+	@include res(m){
+		padding-top: 0;
+		text-align: center;
+		padding-bottom: 0;
+		margin-bottom: 20px;
+	}
+
 	a {
 		transition: all 0.3s ease;
 		&:hover {
@@ -22,15 +36,22 @@
 	line-height: (18/12);
 	font-weight: 300;
 	color: $gray;
+	@include res(m) {
+		text-align: center;
+		margin-bottom: 20px;
+	}
 }
 
 .footer__soc {
 	display: flex;
 	align-items: center;
+	justify-content: center;
+
 	a {
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		flex-shrink: 0;
 		width: 44px;
 		height: 44px;
 		margin: 0 5px;
@@ -38,21 +59,28 @@
 		border-radius: 50%;
 		color: $gray;
 		transition: all 0.3s ease;
+
 		&:hover {
 			border-color: $green;
 			color: $green;
+			background: $green;
+			color: #FFF;
 		}
 	}
+
 	.i-soc-vk {
 		font-size: 15px;
 	}
+
 	.i-soc-fb {
 		font-size: 23px;
 		margin-bottom: 1px;
 	}
+	
 	.i-soc-insta {
 		font-size: 20px;
 	}
+	
 	.i-soc-twi {
 		font-size: 20px;
 	}
@@ -62,12 +90,19 @@
 	font-size: 12px;
 	color: $gray;
 	text-transform: uppercase;
+	text-align: right;
+	@include res(m) {
+		text-align: center;
+		margin-top: 20px;
+	}
+
 	a {
 		transition: all 0.3s ease;
 		&:hover {
 			color: #fff;
 		}
 	}
+
 	span {
 		color: $green;
 	}

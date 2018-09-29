@@ -11,7 +11,7 @@ $cross_weight: 2px;
 $cross_color: #FFF;
 $cross-color--hover: #000;
 $cross-bg-color: #000;
-$cross-bg-color--hover: #fffb42;
+$cross-bg-color--hover: $green;
 
 @mixin cross() {
 	position: absolute;

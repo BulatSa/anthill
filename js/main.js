@@ -117,15 +117,10 @@ $.fancybox.defaults.i18n =
 	};
 
 function init_fancy() {
-	$().fancybox({
-		selector: '.fancy',
-		buttons: ['close']
-	});
-	$().fancybox({
-		selector: '.fancy-modal',
+	$('.fancy-modal').fancybox({
 		touch: false
 	});
-	$().fancybox({
+	$('.fancy-map').fancybox({
 		selector: '.fancy-map',
 		toolbar: false,
 		smallBtn: true,
@@ -134,7 +129,7 @@ function init_fancy() {
 }
 
 function init_fancy__video() {
-	$().fancybox({
+	$('.fancy-video').fancybox({
 		selector: '.fancy-video',
 		toolbar: false,
 		smallBtn: true,
@@ -156,31 +151,55 @@ $(function () {
 
 
 /***********************
- Прокрутка к секциям BEGIN
+ Lazy BEGIN
  ***********************/
-$(function () {
-	$('.scrollto').on('click', function () {
-		var elementClick = $(this).attr("href");
-		var destination = $(elementClick).offset().top;
-		$('html,body').stop().animate({scrollTop: destination}, 1000);
-		return false;
+function lazyLoad(){
+	var lazyImgs = $('[data-lazy]');
+
+	lazyImgs.each(function(){
+		var lazyImage = $(this);
+		var src = lazyImage.attr('data-lazy');
+		lazyImage.attr('src',src);
 	});
+}
+
+function lazyLoadBg(){
+	var lazyImgs = $('[data-lazybg]');
+
+	lazyImgs.each(function(){
+		var lazyImage = $(this);
+		var src = lazyImage.attr('data-lazybg');
+		lazyImage.css('background-image','url('+src+')');
+	});
+}
+
+$(function(){
+	lazyLoad();
+	lazyLoadBg();
+});
+
+$(window).on('load',function () {
+	Waypoint.refreshAll();
 });
 /***********************
- Прокрутка к секциям END
+ Lazy END
  ***********************/
 
 
 /***********************
- Waypoints BEGIN
- ***********************/
-$(function () {
-	$('.anim').waypoint(function () {
-		$(this.element).toggleClass('animated');
-	}, {
-		offset: '85%'
+slider BEGIN
+***********************/
+$(function($){
+	$('.partners-slider').flickity({
+		cellAlign: 'left',
+		contain: true,
+		pageDots: false,
+		prevNextButtons: false,
+		wrapAround: true,
+		autoPlay: 3000,
+		imagesLoaded: true
 	});
 });
 /***********************
- Waypoints END
- ***********************/
+slider END
+***********************/
